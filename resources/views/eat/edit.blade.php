@@ -2,6 +2,7 @@
 
 @section('content')
     @include('eat._form', [
+        'method'   => 'PUT',
         'action'   => route('eat.update', $eat->id),
         'datetime' => $eat->datetime,
         'store'    => $eat->store,

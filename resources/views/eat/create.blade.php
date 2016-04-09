@@ -2,6 +2,7 @@
 
 @section('content')
     @include('eat._form', [
+        'method'   => 'POST',
         'action'   => route('eat.store'),
         'datetime' => Carbon\Carbon::now()->format('Y-m-d H:i'),
         'store'    => null,

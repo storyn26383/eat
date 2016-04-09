@@ -7,7 +7,7 @@
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ $action }}">
                         {!! csrf_field() !!}
-                        {!! method_field('PUT') !!}
+                        {!! method_field($method) !!}
 
                         <div class="form-group{{ $errors->has('datetime') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">我哪時吃的？</label>
