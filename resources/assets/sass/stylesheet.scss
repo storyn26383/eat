@@ -27,3 +27,7 @@ hr {
     }
 }
 
+.bootstrap-datetimepicker-widget table td.today:before {
+    border: solid transparent;
+    border-width: 0 0 7px 7px;
+}
