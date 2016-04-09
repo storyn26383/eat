@@ -1,0 +1,20 @@
+@import "settings";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bower_components/eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker";
+@import "bower_components/font-awesome/scss/font-awesome";
+
+hr {
+    margin: 10px -1px;
+}
+
+.fa-btn {
+    margin-right: 6px;
+}
+
+.form-control[readonly] {
+    background-color: #fff;
+}
+
+.list-group-item > p:last-child{
+    margin-bottom: 0;
+}

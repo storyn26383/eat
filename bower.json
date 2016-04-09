@@ -1,0 +1,13 @@
+{
+  "name": "Eat",
+  "version": "0.0.0",
+  "authors": [
+    "Sasaya <storyn26383@gmail.com>"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37",
+    "smalot-bootstrap-datetimepicker": "^2.3.10"
+  }
+}

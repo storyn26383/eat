@@ -11,10 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [
+        'as'   => 'eat.index',
+        'uses' => 'EatController@index',
+    ]);
+
+    Route::get('/create', [
+        'as'   => 'eat.create',
+        'uses' => 'EatController@create',
+    ]);
+
+    Route::post('/eat', [
+        'as'   => 'eat.store',
+        'uses' => 'EatController@store',
+    ]);
+});
