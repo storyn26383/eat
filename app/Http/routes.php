@@ -19,13 +19,23 @@ Route::group(['middleware' => 'auth'], function () {
         'uses' => 'EatController@index',
     ]);
 
-    Route::get('/create', [
+    Route::get('create', [
         'as'   => 'eat.create',
         'uses' => 'EatController@create',
     ]);
 
-    Route::post('/eat', [
+    Route::post('eat', [
         'as'   => 'eat.store',
         'uses' => 'EatController@store',
+    ]);
+
+    Route::get('eat/{eat}/edit', [
+        'as'   => 'eat.edit',
+        'uses' => 'EatController@edit',
+    ]);
+
+    Route::put('eat/{eat}', [
+        'as'   => 'eat.update',
+        'uses' => 'EatController@update',
     ]);
 });

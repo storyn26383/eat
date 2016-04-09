@@ -26,4 +26,16 @@ class EatController extends Controller
 
         return redirect(route('eat.index'));
     }
+
+    public function edit(Eat $eat)
+    {
+        return view('eat.edit', compact('eat'));
+    }
+
+    public function update(EatRequest $request, Eat $eat)
+    {
+        $eat->update($request->all());
+
+        return redirect(route('eat.index'));
+    }
 }
