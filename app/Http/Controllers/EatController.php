@@ -8,6 +8,13 @@ use App\Http\Requests\EatRequest;
 
 class EatController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('eat', [
+            'only' => ['edit', 'update']
+        ]);
+    }
+
     public function index()
     {
         return view('eat.index', [

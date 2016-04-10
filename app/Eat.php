@@ -10,7 +10,8 @@ class Eat extends Model
     protected $fillable = ['datetime', 'store', 'food', 'price', 'rate', 'note'];
 
     protected $casts = [
-        'rate' => 'integer',
+        'user_id' => 'integer',
+        'rate'    => 'integer',
     ];
 
     protected static function boot()
