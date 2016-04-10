@@ -11,7 +11,10 @@
 |
 */
 
-Route::auth();
+// Authentication Routes...
+Route::get('login', 'Auth\AuthController@showLoginForm');
+Route::post('login', 'Auth\AuthController@login');
+Route::get('logout', 'Auth\AuthController@logout');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [

@@ -13,7 +13,6 @@
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
@@ -30,10 +29,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">登入</a></li>
-                        <li><a href="{{ url('/register') }}">註冊</a></li>
-                    @else
+                    @if (Auth::user())
                         <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>登出 [{{ Auth::user()->name }}]</a></li>
                     @endif
                 </ul>
