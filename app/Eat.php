@@ -24,6 +24,11 @@ class Eat extends Model
         });
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function getDatetimeAttribute($value)
     {
         return (new Carbon($value))->format('Y-m-d H:i');

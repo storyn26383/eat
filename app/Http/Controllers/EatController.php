@@ -18,7 +18,7 @@ class EatController extends Controller
     public function index()
     {
         return view('eat.index', [
-            'eats' => Eat::paginate(),
+            'eats' => Eat::with('user')->paginate(),
         ]);
     }
 

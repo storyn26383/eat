@@ -6,23 +6,28 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        我吃了？
+                        我們吃了？
                         <a class="pull-right text-primary" href="{{ route('eat.create') }}">新增</a>
                     </div>
 
                     <ul class="list-group">
                         @foreach ($eats as $eat)
                             <li class="list-group-item">
-                                @can('manage', $eat)
-                                    <p class="function-bar">
+                                <p class="function-bar">
+                                    @can('manage', $eat)
                                         <a class="text-muted" href="{{ route('eat.edit', $eat->id) }}">
                                             <i class="fa fa-pencil fa-lg"></i>
                                         </a>
                                         <a class="text-muted" href="{{ route('eat.destroy', $eat->id) }}" data-method="DELETE">
                                             <i class="fa fa-trash fa-lg"></i>
                                         </a>
-                                    </p>
-                                @endcan
+                                    @else
+                                        <span class="text-muted small">
+                                            <i class="fa fa-angle-double-right"></i>
+                                            {{ $eat->user->name }}
+                                        </span>
+                                    @endcan
+                                </p>
                                 <p class="pull-right">
                                     @for ($i = 0; $i < $eat->rate; $i++)
                                         <i class="fa fa-star"></i>
