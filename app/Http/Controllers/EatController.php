@@ -11,7 +11,7 @@ class EatController extends Controller
     public function __construct()
     {
         $this->middleware('eat', [
-            'only' => ['edit', 'update']
+            'only' => ['edit', 'update', 'destroy']
         ]);
     }
 
@@ -44,5 +44,12 @@ class EatController extends Controller
         $eat->update($request->all());
 
         return redirect(route('eat.index'));
+    }
+
+    public function destroy(Eat $eat)
+    {
+        $eat->delete();
+
+        return back();
     }
 }

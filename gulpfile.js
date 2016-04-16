@@ -16,6 +16,7 @@ elixir(function(mix) {
         .sass('stylesheet.scss',
             'resources/assets/css/stylesheet.css', './')
         .styles([
+            'bower_components/animate.css/animate.css',
             'resources/assets/css/stylesheet.css'
         ], 'public/css/stylesheet.css', './')
 
@@ -26,6 +27,7 @@ elixir(function(mix) {
             'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
             'bower_components/moment/moment.js',
             'bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js',
+            'bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
             'resources/assets/js/script.js'
         ], 'public/js/script.js', './')
 

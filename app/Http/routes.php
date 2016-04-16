@@ -41,4 +41,9 @@ Route::group(['middleware' => 'auth'], function () {
         'as'   => 'eat.update',
         'uses' => 'EatController@update',
     ]);
+
+    Route::delete('eat/{eat}', [
+        'as'   => 'eat.destroy',
+        'uses' => 'EatController@destroy',
+    ]);
 });

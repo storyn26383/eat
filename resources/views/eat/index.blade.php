@@ -14,9 +14,14 @@
                         @foreach ($eats as $eat)
                             <li class="list-group-item">
                                 @can('manage', $eat)
-                                    <a class="text-muted edit-btn" href="{{ route('eat.edit', $eat->id) }}">
-                                        <i class="fa fa-pencil fa-lg"></i>
-                                    </a>
+                                    <p class="function-bar">
+                                        <a class="text-muted" href="{{ route('eat.edit', $eat->id) }}">
+                                            <i class="fa fa-pencil fa-lg"></i>
+                                        </a>
+                                        <a class="text-muted" href="{{ route('eat.destroy', $eat->id) }}" data-method="DELETE">
+                                            <i class="fa fa-trash fa-lg"></i>
+                                        </a>
+                                    </p>
                                 @endcan
                                 <p class="pull-right">
                                     @for ($i = 0; $i < $eat->rate; $i++)

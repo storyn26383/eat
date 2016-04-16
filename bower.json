@@ -8,6 +8,7 @@
     "bootstrap-sass": "^3.3.6",
     "font-awesome": "^4.5.0",
     "eonasdan-bootstrap-datetimepicker": "^4.17.37",
-    "smalot-bootstrap-datetimepicker": "^2.3.10"
+    "noty": "^2.3.8",
+    "animate.css": "^3.5.1"
   }
 }

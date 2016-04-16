@@ -20,10 +20,19 @@ hr {
         margin-bottom: 0;
     }
 
-    .edit-btn {
+    .function-bar {
         position: absolute;
         right: 15px;
-        bottom: 10px;
+        bottom: 12px;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+
+            + a {
+                margin-left: 10px;
+            }
+        }
     }
 }
 
