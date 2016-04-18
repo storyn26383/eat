@@ -41,14 +41,7 @@
                                 <p>$ {{ number_format($eat->price) }}</p>
                                 @if ($eat->note)
                                     <hr>
-                                    <p>
-                                        @foreach (explode("\n", $eat->note) as $index => $row)
-                                            @if (0 !== $index)
-                                                <br>
-                                            @endif
-                                            {{ $row }}
-                                        @endforeach
-                                    </p>
+                                    <p>{!! nl2br(e($eat->note)) !!}</p>
                                 @endif
                             </li>
                         @endforeach
