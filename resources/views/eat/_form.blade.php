@@ -14,7 +14,7 @@
 
                             <div class="col-md-6">
                                 <div class="input-group" data-target="datetimepicker">
-                                    <input type="datetime" class="form-control" name="datetime" value="{{ old('datetime', $datetime) }}" readonly>
+                                    <input type="text" class="form-control" name="datetime" value="{{ old('datetime', $datetime) }}" readonly>
                                     <span class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </span>
@@ -32,7 +32,7 @@
                             <label class="col-md-4 control-label">我在哪吃的？</label>
 
                             <div class="col-md-6">
-                                <input type="store" class="form-control" name="store" value="{{ old('store', $store) }}">
+                                <input type="text" class="form-control" name="store" value="{{ old('store', $store) }}">
 
                                 @if ($errors->has('store'))
                                     <span class="help-block">
@@ -46,7 +46,7 @@
                             <label class="col-md-4 control-label">我吃了什麼？</label>
 
                             <div class="col-md-6">
-                                <input type="food" class="form-control" name="food" value="{{ old('food', $food) }}">
+                                <input type="text" class="form-control" name="food" value="{{ old('food', $food) }}">
 
                                 @if ($errors->has('food'))
                                     <span class="help-block">
@@ -62,7 +62,7 @@
                             <div class="col-md-6">
                                 <div class="input-group">
                                     <span class="input-group-addon">$</span>
-                                    <input type="price" class="form-control" name="price" value="{{ old('price', $price) }}">
+                                    <input type="text" class="form-control" name="price" value="{{ old('price', $price) }}">
                                 </div>
 
                                 @if ($errors->has('price'))
@@ -95,7 +95,7 @@
                             <label class="col-md-4 control-label">我有話想說～</label>
 
                             <div class="col-md-6">
-                                <textarea type="note" class="form-control" name="note" rows="5">{{ old('note', $note) }}</textarea>
+                                <textarea class="form-control" name="note" rows="5">{{ old('note', $note) }}</textarea>
 
                                 @if ($errors->has('note'))
                                     <span class="help-block">
